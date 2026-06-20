@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳洲幸运10 · 简明指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f4f6fb;
+      color: #1e2a3a;
+      line-height: 1.6;
+    }
+
+    /* 深色头图 – 故事氛围 */
+    .hero {
+      background: linear-gradient(145deg, #0b1a2b 0%, #1e2f42 100%);
+      color: #e8edf3;
+      padding: 3rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to bottom, transparent, #f4f6fb);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      color: #d5e2f0;
+    }
+
+    .hero .opening {
+      font-size: 1.2rem;
+      max-width: 520px;
+      margin: 0 auto;
+      color: #bcccdc;
+      font-weight: 300;
+    }
+
+    /* 浅色正文区 – 温和呼吸感 */
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    .intro {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2rem 2rem 2.2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 20, 40, 0.05);
+      margin-bottom: 2.2rem;
+    }
+
+    .intro p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2f3f52;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点卡片区 – 三个小条目，不冗长 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2rem 0 2.2rem;
+    }
+
+    .feature-item {
+      flex: 1 1 180px;
+      background: white;
+      border-radius: 18px;
+      padding: 1.4rem 1.2rem 1.2rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.02);
+      border-left: 4px solid #476d8c;
+      transition: transform 0.15s ease, box-shadow 0.15s;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(38, 70, 96, 0.06);
+    }
+
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1e3a4c;
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-item p {
+      font-size: 0.92rem;
+      color: #3e556b;
+      line-height: 1.5;
+    }
+
+    /* 温和的提醒/FAQ片段 */
+    .note-card {
+      background: #eef3f9;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem 1.8rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .note-card h4 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1a3144;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .note-card h4::before {
+      content: '⏺';
+      font-size: 1.2rem;
+      color: #476d8c;
+    }
+
+    .note-card p,
+    .note-card li {
+      font-size: 0.94rem;
+      color: #2b4055;
+      margin-bottom: 0.4rem;
+    }
+
+    .note-card ul {
+      padding-left: 1.4rem;
+      list-style: none;
+    }
+
+    .note-card ul li::before {
+      content: '– ';
+      color: #6b8aa8;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #1f6590;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #0d3b59;
+      border-bottom: 1px solid #1f6590;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #6a7e92;
+      font-size: 0.9rem;
+      border-top: 1px solid #dbe3ed;
+      padding-top: 1.8rem;
+      margin-top: 1rem;
+    }
+
+    .footer-note span {
+      display: inline-block;
+      margin: 0 6px;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .hero .opening {
+        font-size: 1rem;
+      }
+
+      .content-wrapper {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+
+      .intro {
+        padding: 1.5rem;
+      }
+
+      .feature-item {
+        flex: 1 1 100%;
+      }
+
+      .note-card {
+        padding: 1.2rem 1.2rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>澳洲幸运10 · 一段关于节奏与选择的叙述</h1>
+    <div class="opening">
+      每个人都在寻找属于自己的步调。数字之间，藏着简单的逻辑。
+    </div>
+  </section>
+
+  <div class="content-wrapper">
+    <div class="intro">
+      <p>
+        如果你刚刚接触 <a href="https://home-auslucky10.com">澳洲幸运10</a>，大概会好奇它是如何运作的。其实它并不复杂：每天多期开奖，每个结果由1到10的数字构成。你只需要了解最基本的规则，然后以自己的节奏去观察。
+      </p>
+      <p>
+        有人把精力放在走势的细微变化上，有人喜欢研究冷热数字的出现频率，也有些人更享受偶尔参与、不紧不慢的状态。不管是哪一种，这份指南想传递的只有一件事：先把规则摸清楚，再谈自己的策略。
+      </p>
+      <p>
+        初次接触时最稳妥的方式，是先花一点时间熟悉开奖节奏和玩法分类。很多人的困惑往往来自信息过载，而真正的进入是从简化开始的。
+      </p>
+    </div>
+
+    <!-- 特点卡片：三条简明特点 -->
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>节奏清晰</h3>
+        <p>每日多期，开奖间隔相对固定。你可以根据自己的空闲时段选择关注哪些场次，不必时刻紧盯。</p>
+      </div>
+      <div class="feature-item">
+        <h3>数字范围小</h3>
+        <p>1–10 的数字区间，让观察和记录变得直观。不需要复杂的计算，图表和趋势更容易理解。</p>
+      </div>
+      <div class="feature-item">
+        <h3>选择空间灵活</h3>
+        <p>可以有多种组合方式。从单数字到多数字，从简单到稍微复杂的玩法，每个人都能找到适合的参与程度。</p>
+      </div>
+    </div>
+
+    <!-- 温和提醒 / FAQ 摘要 -->
+    <div class="note-card">
+      <h4>一些温和的提醒</h4>
+      <ul>
+        <li>先理解开奖规则和赔率结构，再考虑其他。</li>
+        <li>记录几期结果作为练习，熟悉过程比急于参与更重要。</li>
+        <li>设定一个自己舒适的参与频率，避免陷入持续追逐。</li>
+        <li>如果感到不确定，就暂停下来，回头看看最初的笔记。</li>
+      </ul>
+      <p style="margin-top: 0.8rem;">
+        最重要的不是技巧，而是你始终清楚自己正在做什么。
+      </p>
+    </div>
+
+    <div class="intro" style="margin-top: 1rem;">
+      <p>
+        从第一次打开 <a href="https://home-auslucky10.com">澳洲幸运10</a> 的页面，到慢慢形成自己的观察方式，这个过程本身比结果更有价值。保持一种稳定的节奏，不被一时的波动带着走，才能走得远一些。
+      </p>
+      <p>
+        希望这份简短的指南能让你在起步时少一点困惑，多一份从容。毕竟，数字只是工具，而你的时间与注意力才是真正稀缺的。
+      </p>
+    </div>
+
+    <div class="footer-note">
+      <span>© 一份安静的指南</span>
+      <span>·</span>
+      <span>循序渐进</span>
+    </div>
+  </div>
+</body>
+</html>
